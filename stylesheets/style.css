@@ -1,0 +1,11 @@
+@import 'reset.css';
+@import 'content.css';
+@font-face {
+  font-family: "MontserratAlternates-Black";
+  src: url("../fonts/MontserratAlternates-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MontserratAlternates-Regular";
+  src: url("../fonts/MontserratAlternates-Regular.ttf") format("truetype");
+}
+@import "responsive.css";

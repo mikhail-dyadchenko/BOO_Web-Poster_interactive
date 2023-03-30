@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascripts/jquery-3.6.1.js" charset="utf-8"></script>
+    <script src="javascripts/jquery-ui.js" charset="utf-8"></script>
+    <script src="javascripts/jquery.ui.touch-punch.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>БУ: собери монстра!</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <!-- screensaver -->
+    <div class="hello">
+      <img src="images/hello.svg" alt="hello">
+      <div class="start">
+        <h2>Игра</h2>
+        <p>Начать!</p>
+      </div>
+    </div>
+    <!-- menu -->
+    <div class="menublock hidden1">
+      <div class="menubar"></div>
+    </div>
+    <!-- screen1 -->
+    <div class="frame1 hidden1">
+      <h3>Выбери форму тела</h3>
+      <div class="arrow1"></div>
+      <div class="menutransparent">
+        <div class="oval"></div>
+        <div class="rounded"></div>
+        <div class="rectangle"></div>
+        <div class="circle"></div>
+      </div>
+      <div id="oval1" class="droppable">
+        <div class="mouth11"></div>
+        <div class="mouth21"></div>
+        <div class="mouth31"></div>
+        <div class="mouth41"></div>
+      </div>
+      <div id="rounded1" class="droppable">
+        <div class="mouth11"></div>
+        <div class="mouth21"></div>
+        <div class="mouth31"></div>
+        <div class="mouth41"></div>
+      </div>
+      <div id="rectangle1" class="droppable">
+        <div class="mouth11"></div>
+        <div class="mouth21"></div>
+        <div class="mouth31"></div>
+        <div class="mouth41"></div>
+      </div>
+      <div id="circle1" class="droppable">
+        <div class="mouth11"></div>
+        <div class="mouth21"></div>
+        <div class="mouth31"></div>
+        <div class="mouth41"></div>
+      </div>
+    </div>
+    <!-- screen2 -->
+    <div class="frame2 hidden2">
+      <h3>Выбери цвет тела</h3>
+      <div class="arrow2"></div>
+      <div class="menutransparent2">
+        <div class="orange"></div>
+        <div class="red"></div>
+        <div class="green"></div>
+        <div class="purple"></div>
+      </div>
+    </div>
+    <!-- screen3 -->
+    <div class="frame3 hidden3">
+      <h3>Выбери рот</h3>
+      <div class="arrow3"></div>
+      <div class="menutransparent3">
+        <div class="mouth1"></div>
+        <div class="mouth2"></div>
+        <div class="mouth3"></div>
+        <div class="mouth4"></div>
+      </div>
+    </div>
+    <!-- screen4 -->
+    <div class="frame4 hidden4">
+      <h3>Перетащи глаза</h3>
+      <div class="arrow4"></div>
+      <div class="menutransparent4">
+        <div id="draggable1" class="eye" draggable="true"></div>
+        <div id="draggable2" class="eye" draggable="true"></div>
+        <div id="draggable3" class="eye" draggable="true"></div>
+        <div id="draggable4" class="eye" draggable="true"></div>
+        <div id="draggable5" class="eye" draggable="true"></div>
+        <div id="draggable6" class="eye" draggable="true"></div>
+        <div id="draggable7" class="eye" draggable="true"></div>
+        <div id="draggable8" class="eye" draggable="true"></div>
+        <div id="draggable9" class="eye" draggable="true"></div>
+        <div id="draggable10" class="eye" draggable="true"></div>
+        <div id="draggable11" class="eye" draggable="true"></div>
+        <div id="draggable12" class="eye" draggable="true"></div>
+      </div>
+    </div>
+    <!-- screen5 -->
+    <div class="frame5 hidden5">
+      <h3>Выбери ноги</h3>
+      <div class="arrow5"></div>
+      <div class="menutransparent5">
+        <div class="legs1"></div>
+        <div class="legs2"></div>
+        <div class="legs3"></div>
+      </div>
+      <div class="legs11"></div>
+      <div class="legs21"></div>
+      <div class="legs31"></div>
+    </div>
+    <!-- screen6 -->
+    <div class="frame6 hidden6">
+      <h3>Выбери руки (опционально)</h3>
+      <div class="arrow6"></div>
+      <div class="menutransparent6">
+        <div class="hands1"></div>
+        <div class="hands2"></div>
+        <div class="nohands"></div>
+      </div>
+      <div class="hands11"></div>
+      <div class="hands21"></div>
+    </div>
+    <!-- screen7 -->
+    <div class="frame7 hidden7">
+      <h3>Выбери волосы или рога</h3>
+      <div class="arrow7"></div>
+      <div class="menutransparent7">
+        <div class="hair1"></div>
+        <div class="hair2"></div>
+        <div class="horns"></div>
+      </div>
+      <div class="hair11"></div>
+      <div class="hair21"></div>
+      <div class="horns1"></div>
+    </div>
+    <!-- screen8 -->
+    <div class="frame8 hidden8">
+      <h3>Давай проверим, <br>насколько я страшный!</h3>
+      <div class="menutransparent8">
+        <div class="try">
+          <p>Проверить</p>
+        </div>
+      </div>
+    </div>
+    <!-- screen9 -->
+    <div class="frame9">
+      <div class="man1"></div>
+      <div class="scream"></div>
+    </div>
+    <!-- screen10 -->
+    <div class="frame10 hidden9">
+      <h3>Ура! Теперь я доволен! <br>Хочешь так же?</h3>
+      <div class="menutransparent9">
+        <h3>Дарю тебе абонемент на целый день <br>в развлекательном центре для монстров БУ!</h3>
+        <div class="take">
+          <p>Забрать</p>
+        </div>
+      </div>
+    </div>
+    <!-- screen11 -->
+    <div class="frame11">
+      <div class="ticket"></div>
+      <div class="download">
+        <p>Скачать</p>
+      </div>
+    </div>
+    <!-- screen12 -->
+    <div class="frame12">
+      <div class="hse"></div>
+    </div>
+    <!-- cursor -->
+    <div class="hand1"></div>
+
+    <script type="text/javascript">
+      const cursorHand1 = document.querySelector('.hand1');
+      const moveCursor = (e)=> {
+        const mouseY = e.clientY;
+        const mouseX = e.clientX;
+        cursorHand1.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+      }
+      window.addEventListener('mousemove', moveCursor)
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("p").click(function(){
+          $(".hello").css("display","none");
+          $(".frame1.hidden1, .menublock.hidden1").removeClass("hidden1");
+            $(".oval").click(function(){
+              $("#oval1").css("display","block");
+              $("#rounded1").css("display","none");
+              $("#rectangle1").css("display","none");
+              $("#circle1").css("display","none");
+            });
+            $(".rounded").click(function(){
+              $("#rounded1").css("display","block");
+              $("#oval1").css("display","none");
+              $("#rectangle1").css("display","none");
+              $("#circle1").css("display","none");
+            });
+            $(".rectangle").click(function(){
+              $("#rectangle1").css("display","block");
+              $("#oval1").css("display","none");
+              $("#rounded1").css("display","none");
+              $("#circle1").css("display","none");
+            });
+            $(".circle").click(function(){
+              $("#circle1").css("display","block");
+              $("#oval1").css("display","none");
+              $("#rounded1").css("display","none");
+              $("#rectangle1").css("display","none");
+            });
+        });
+        $(".arrow1").click(function(){
+          $(".menutransparent, .frame1 h3, .arrow1").css("display","none");
+          $(".frame2.hidden2").removeClass("hidden2");
+            $(".orange").click(function(){
+              $("#oval1").css("background","#F39200");
+              $("#rounded1").css("background","#F39200");
+              $("#rectangle1").css("background","#F39200");
+              $("#circle1").css("background","#F39200");
+            });
+            $(".red").click(function(){
+              $("#oval1").css("background","#E6332A");
+              $("#rounded1").css("background","#E6332A");
+              $("#rectangle1").css("background","#E6332A");
+              $("#circle1").css("background","#E6332A");
+            });
+            $(".green").click(function(){
+              $("#oval1").css("background","#04FF00");
+              $("#rounded1").css("background","#04FF00");
+              $("#rectangle1").css("background","#04FF00");
+              $("#circle1").css("background","#04FF00");
+            });
+            $(".purple").click(function(){
+              $("#oval1").css("background","#82368C");
+              $("#rounded1").css("background","#82368C");
+              $("#rectangle1").css("background","#82368C");
+              $("#circle1").css("background","#82368C");
+            });
+        });
+        $(".arrow2").click(function(){
+          $(".menutransparent2, .frame2 h3, .arrow2").css("display","none");
+          $(".frame3.hidden3").removeClass("hidden3");
+            $(".mouth1").click(function(){
+              $(".mouth11").css("display","block");
+              $(".mouth21").css("display","none");
+              $(".mouth31").css("display","none");
+              $(".mouth41").css("display","none");
+            });
+            $(".mouth2").click(function(){
+              $(".mouth11").css("display","none");
+              $(".mouth21").css("display","block");
+              $(".mouth31").css("display","none");
+              $(".mouth41").css("display","none");
+            });
+            $(".mouth3").click(function(){
+              $(".mouth11").css("display","none");
+              $(".mouth21").css("display","none");
+              $(".mouth31").css("display","block");
+              $(".mouth41").css("display","none");
+            });
+            $(".mouth4").click(function(){
+              $(".mouth11").css("display","none");
+              $(".mouth21").css("display","none");
+              $(".mouth31").css("display","none");
+              $(".mouth41").css("display","block");
+            });
+        });
+        $(".arrow3").click(function(){
+          $(".menutransparent3, .frame3 h3, .arrow3").css("display","none");
+          $(".frame4.hidden4").removeClass("hidden4");
+            $(function(){
+	            $("#draggable1, #draggable2, #draggable3, #draggable4, #draggable5, #draggable6, #draggable7, #draggable8, #draggable9, #draggable10, #draggable11, #draggable12").draggable();
+              $("#oval1, #rounded1, #rectangle1, #circle1").droppable();
+            });
+        });
+        $(".arrow4").click(function(){
+          $(".frame4 h3, .arrow4").css("display","none");
+          $(".frame5.hidden5").removeClass("hidden5");
+            $(".legs1").click(function(){
+              $(".legs11").css("display","block");
+              $(".legs21").css("display","none");
+              $(".legs31").css("display","none");
+            });
+            $(".legs2").click(function(){
+              $(".legs11").css("display","none");
+              $(".legs21").css("display","block");
+              $(".legs31").css("display","none");
+            });
+            $(".legs3").click(function(){
+              $(".legs11").css("display","none");
+              $(".legs21").css("display","none");
+              $(".legs31").css("display","block");
+            });
+        });
+        $(".arrow5").click(function(){
+          $(".menutransparent5, .frame5 h3, .arrow5").css("display","none");
+          $(".frame6.hidden6").removeClass("hidden6");
+            $(".hands1").click(function(){
+              $(".hands11").css("display","block");
+              $(".hands21").css("display","none");
+            });
+            $(".hands2").click(function(){
+              $(".hands11").css("display","none");
+              $(".hands21").css("display","block");
+            });
+            $(".nohands").click(function(){
+              $(".hands11").css("display","none");
+              $(".hands21").css("display","none");
+            });
+        });
+        $(".arrow6").click(function(){
+          $(".menutransparent6, .frame6 h3, .arrow6").css("display","none");
+          $(".frame7.hidden7").removeClass("hidden7");
+            $(".hair1").click(function(){
+              $(".hair11").css("display","block");
+              $(".hair21").css("display","none");
+              $(".horns1").css("display","none");
+            });
+            $(".hair2").click(function(){
+              $(".hair11").css("display","none");
+              $(".hair21").css("display","block");
+              $(".horns1").css("display","none");
+            });
+            $(".horns").click(function(){
+              $(".hair11").css("display","none");
+              $(".hair21").css("display","none");
+              $(".horns1").css("display","block");
+            });
+        });
+        $(".arrow7").click(function(){
+          $(".menutransparent7, .frame7 h3, .arrow7").css("display","none");
+          $(".frame8.hidden8").removeClass("hidden8");
+        });
+        $(".try").click(function(){
+          $(".frame8 h3, .try").css("display","none");
+          $(".frame9").css("display","flex");
+          $("body, .menutransparent8").css("background","white");
+        });
+        $(".frame9").click(function(){
+          $(".man1").css("display","none");
+          $("body, .menutransparent8").css("background","black");
+          $(".scream").css("display","block");
+        });
+        $(".scream").click(function(){
+          $(".frame9").css("display","none");
+          $(".frame10").removeClass("hidden9");
+        });
+        $(".take").click(function(){
+          $(".frame11").css("display","flex");
+        });
+        $(".download").click(function(){
+          $(".frame12").css("display","flex");
+        });
+      })
+    </script>
+  </body>
+</html>

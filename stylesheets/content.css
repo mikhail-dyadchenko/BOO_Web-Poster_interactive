@@ -1,0 +1,964 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  cursor: none;
+}
+/* cursor */
+.hand1 {
+  height: 60px;
+  width: 50px;
+  position: absolute;
+  background-image: url('../images/cursor1.svg');
+  margin: 15px 15px 15px 15px;
+  z-index: 1001;
+}
+/* screensaver */
+.hello {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hello img {
+  position: absolute;
+  margin-top: 60vh;
+}
+.start {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.start h2 {
+  position: absolute;
+  font-family: 'MontserratAlternates-Regular';
+  font-size: 30px;
+  color: white;
+  margin-top: 45vh;
+}
+.start p {
+  position: absolute;
+  font-family: 'MontserratAlternates-Black';
+  font-size: 60px;
+  color: #E6332A;
+  margin-top: 70vh;
+  animation: start 2s infinite;
+}
+.start p:hover {
+  color: #04FF00;
+  animation-play-state: paused;
+}
+/* menu */
+.menublock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menubar {
+  position: absolute;
+  max-width: 720px;
+  max-height: 150px;
+  background: white;
+  border-radius: 25px;
+  margin-top: 160vh;
+  width: 100%;
+  height: 100%;
+}
+/* screen1 */
+.frame1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h3 {
+  position: absolute;
+  font-family: 'MontserratAlternates-Black';
+  font-size: 24px;
+  color: white;
+  margin-top: 20vh;
+  text-align: center;
+}
+.arrow1, .arrow2, .arrow3, .arrow4, .arrow5, .arrow6, .arrow7 {
+  position: absolute;
+  border: solid white;
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 10px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-top: 100vh;
+  margin-left: 88vw;
+}
+.arrow1:hover, .arrow2:hover, .arrow3:hover, .arrow4:hover, .arrow5:hover, .arrow6:hover, .arrow7:hover {
+  border: solid #04FF00;
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 10px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  animation: arrowright 400ms infinite;
+}
+.menutransparent, .menutransparent2, .menutransparent3, .menutransparent4, .menutransparent5, .menutransparent6, .menutransparent7 {
+  position: absolute;
+  max-width: 720px;
+  max-height: 150px;
+  background: white;
+  border-radius: 25px;
+  margin-top: 160vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 997;
+  width: 100%;
+  height: 100%;
+}
+.menutransparent8 {
+  position: absolute;
+  max-width: 730px;
+  max-height: 160px;
+  background: black;
+  border-radius: 25px;
+  margin-top: 160vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 997;
+  width: 100%;
+  height: 100%;
+}
+.menutransparent9 {
+  position: absolute;
+  max-width: 730px;
+  max-height: 230px;
+  background: transparent;
+  border-radius: 25px;
+  margin-top: 140vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 997;
+  width: 100%;
+  height: 100%;
+}
+.oval {
+  position: relative;
+  width: 50px;
+  height: 90px;
+  background: black;
+  border-radius: 25px;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.rounded {
+  position: relative;
+  width: 50px;
+  height: 90px;
+  background: black;
+  border-radius: 25px 25px 4px 4px;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.rectangle {
+  position: relative;
+  width: 50px;
+  height: 90px;
+  background: black;
+  border-radius: 4px 4px 4px 4px;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.circle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 50%;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.oval:hover, .rounded:hover, .rectangle:hover, .circle:hover {
+  transform: scale(1.2);
+}
+#oval1 {
+  position: absolute;
+  width: 150px;
+  height: 270px;
+  background: white;
+  border-radius: 75px;
+  margin-top: 78vh;
+  display: none;
+  overflow: hidden;
+  z-index: 3;
+  max-width: 100%;
+}
+#rounded1 {
+  position: absolute;
+  width: 150px;
+  height: 270px;
+  background: white;
+  border-radius: 75px 75px 12px 12px;
+  margin-top: 78vh;
+  display: none;
+  overflow: hidden;
+  z-index: 3;
+  max-width: 100%;
+}
+#rectangle1 {
+  position: absolute;
+  width: 150px;
+  height: 270px;
+  background: white;
+  border-radius: 12px 12px 12px 12px;
+  margin-top: 78vh;
+  display: none;
+  overflow: hidden;
+  z-index: 3;
+  max-width: 100%;
+}
+#circle1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 50%;
+  margin-top: 78vh;
+  display: none;
+  overflow: hidden;
+  z-index: 3;
+  max-width: 100%;
+}
+.hidden1 {
+  display: none;
+}
+/* screen2 */
+.frame2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.orange {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #F39200;
+  border-radius: 50%;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.red {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #E6332A;
+  border-radius: 50%;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.green {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #04FF00;
+  border-radius: 50%;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.purple {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #82368C;
+  border-radius: 50%;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.orange:hover, .red:hover, .green:hover, .purple:hover {
+  transform: scale(1.2);
+}
+.hidden2 {
+  display: none;
+}
+/* screen3 */
+.frame3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mouth1 {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background: url('../images/mouth1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.mouth2 {
+  position: relative;
+  width: 50px;
+  height: 73px;
+  background: url('../images/mouth2.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.mouth3 {
+  position: relative;
+  width: 50px;
+  height: 20px;
+  background: url('../images/mouth3.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.mouth4 {
+  position: relative;
+  width: 50px;
+  height: 30px;
+  background: url('../images/mouth4.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.mouth1:hover, .mouth2:hover, .mouth3:hover, .mouth4:hover {
+  transform: scale(1.2);
+}
+.mouth11 {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background: url('../images/mouth1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 150px auto auto auto;
+  display: none;
+  max-width: 100%;
+}
+.mouth21 {
+  position: relative;
+  width: 50px;
+  height: 73px;
+  background: url('../images/mouth2.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 120px auto auto auto;
+  display: none;
+  max-width: 100%;
+}
+.mouth31 {
+  position: relative;
+  width: 50px;
+  height: 20px;
+  background: url('../images/mouth3.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 160px auto auto auto;
+  display: none;
+  max-width: 100%;
+}
+.mouth41 {
+  position: relative;
+  width: 50px;
+  height: 30px;
+  background: url('../images/mouth4.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 150px auto auto auto;
+  display: none;
+  max-width: 100%;
+}
+.hidden3 {
+  display: none;
+}
+/* screen4 */
+.frame4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#draggable1 {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: url('../images/eye1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 995;
+  max-width: 100%;
+}
+#draggable2 {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: url('../images/eye2.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 995;
+  max-width: 100%;
+}
+#draggable3 {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: url('../images/eye3.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 995;
+  max-width: 100%;
+}
+#draggable4 {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: url('../images/eye4.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 995;
+  max-width: 100%;
+}
+#draggable5 {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: url('../images/eye5.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 995;
+  max-width: 100%;
+}
+#draggable6 {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: url('../images/eye6.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 995;
+  max-width: 100%;
+}
+#draggable7 {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: url('../images/eye7.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 995;
+  max-width: 100%;
+}
+#draggable8 {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: url('../images/eye8.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 995;
+  max-width: 100%;
+}
+#draggable9 {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url('../images/eye9.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 995;
+  max-width: 100%;
+}
+#draggable10 {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url('../images/eye10.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 995;
+  max-width: 100%;
+}
+#draggable11 {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url('../images/eye11.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 995;
+  max-width: 100%;
+}
+#draggable12 {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url('../images/eye12.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 995;
+  max-width: 100%;
+}
+.hidden4 {
+  display: none;
+}
+/* screen5 */
+.frame5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.legs1 {
+  position: relative;
+  width: 40px;
+  height: 90px;
+  background: url('../images/legs1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.legs2 {
+  position: relative;
+  width: 50px;
+  height: 48px;
+  background: url('../images/legs2.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.legs3 {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  background: url('../images/legs3.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.legs1:hover, .legs2:hover, .legs3:hover {
+  transform: scale(1.2);
+}
+.legs11 {
+  position: absolute;
+  width: 140px;
+  height: 315px;
+  background: url('../images/legs11.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: none;
+  margin-top: 92vh;
+  z-index: 1;
+  max-width: 100%;
+}
+.legs21 {
+  position: absolute;
+  width: 335px;
+  height: 285px;
+  background: url('../images/legs21.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: none;
+  margin-top: 95vh;
+  margin-left: 1px;
+  z-index: 1;
+  max-width: 100%;
+}
+.legs31 {
+  position: absolute;
+  width: 345px;
+  height: 300px;
+  background: url('../images/legs31.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: none;
+  margin-top: 90vh;
+  margin-left: 20px;
+  z-index: 1;
+  max-width: 100%;
+}
+.hidden5 {
+  display: none;
+}
+/* screen6 */
+.frame6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hands1 {
+  position: relative;
+  width: 70px;
+  height: 25px;
+  background: url('../images/hands1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.hands2 {
+  position: relative;
+  width: 70px;
+  height: 25px;
+  background: url('../images/hands2.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.nohands {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: url('../images/nohands.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.hands1:hover, .hands2:hover, .nohands:hover {
+  transform: scale(1.2);
+}
+.hands11 {
+  position: absolute;
+  width: 305px;
+  height: 188px;
+  background: url('../images/hands11.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: none;
+  margin-top: 85vh;
+  z-index: 1;
+  max-width: 100%;
+}
+.hands21 {
+  position: absolute;
+  width: 305px;
+  height: 188px;
+  background: url('../images/hands21.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: none;
+  margin-top: 85vh;
+  z-index: 1;
+  max-width: 100%;
+}
+.hidden6 {
+  display: none;
+}
+/* screen7 */
+.frame7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hair1 {
+  position: relative;
+  width: 55px;
+  height: 40px;
+  background: url('../images/hair1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.hair2 {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  background: url('../images/hair2.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.horns {
+  position: relative;
+  width: 70px;
+  height: 25px;
+  background: url('../images/horns.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 500ms ease-in-out;
+  max-width: 100%;
+}
+.hair1:hover, .hair2:hover, .horns:hover {
+  transform: scale(1.2);
+}
+.hair11 {
+  position: absolute;
+  width: 180px;
+  height: 131px;
+  background: url('../images/hair11.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: none;
+  margin-top: 44vh;
+  z-index: 996;
+  max-width: 100%;
+}
+.hair21 {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: url('../images/hair21.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: none;
+  margin-top: 60vh;
+  z-index: 996;
+  max-width: 100%;
+}
+.horns1 {
+  position: absolute;
+  width: 210px;
+  height: 75px;
+  background: url('../images/horns1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: none;
+  margin-top: 55vh;
+  z-index: 1;
+  max-width: 100%;
+}
+.hidden7 {
+  display: none;
+}
+/* screen8 */
+.frame8 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.try {
+  position: relative;
+  width: 300px;
+  height: 80px;
+  background: transparent;
+  transition: 500ms ease-in-out;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.try p {
+  position: relative;
+  font-family: 'MontserratAlternates-Black';
+  font-size: 36px;
+  color: #E6332A;
+}
+.try:hover {
+  transform: scale(1.2);
+}
+.try p:hover {
+  color: #04FF00;
+}
+.hidden8 {
+  display: none;
+}
+/* screen9 */
+.frame9 {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 998;
+  animation: boo 3s;
+}
+.man1 {
+  position: absolute;
+  width: 580px;
+  height: 683px;
+  background: url('../images/man1.png');
+  margin-top: 10vh;
+  animation: man 2s steps(1) forwards;
+  animation-delay: 3s;
+}
+.scream {
+  position: absolute;
+  width: 720px;
+  height: 252px;
+  background: url('../images/scream.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: none;
+  max-width: 100%;
+}
+/* screen10 */
+.frame10 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.take {
+  position: relative;
+  width: 300px;
+  height: 80px;
+  background: transparent;
+  transition: 500ms ease-in-out;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.take p {
+  position: relative;
+  font-family: 'MontserratAlternates-Black';
+  font-size: 36px;
+  color: #E6332A;
+}
+.take:hover {
+  transform: scale(1.2);
+}
+.take p:hover {
+  color: #04FF00;
+}
+.hidden9 {
+  display: none;
+}
+/* screen11 */
+.frame11 {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 999;
+}
+.ticket {
+  position: absolute;
+  width: 650px;
+  height: 200px;
+  background: url('../images/ticket.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  max-width: 100%;
+}
+.download {
+  position: relative;
+  width: 300px;
+  height: 80px;
+  background: transparent;
+  transition: 500ms ease-in-out;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 45vh;
+}
+.download p {
+  position: relative;
+  font-family: 'MontserratAlternates-Black';
+  font-size: 36px;
+  color: #E6332A;
+}
+.download:hover {
+  transform: scale(1.2);
+}
+.download p:hover {
+  color: #04FF00;
+}
+/* screen12 */
+.frame12 {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 1000;
+}
+.hse {
+  position: absolute;
+  width: 650px;
+  height: 200px;
+  background: url('../images/hse.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  max-width: 100%;
+}
+/* animation_of_the_button */
+@keyframes start {
+  0% {transition: scale(100%);}
+  50% {transform: scale(85%);}
+}
+/* arrow_animation */
+@keyframes arrowright {
+  0% {margin-left: 88vw;}
+  25% {margin-left: 89vw;}
+  50% {margin-left: 88vw;}
+  75% {margin-left: 89vw;}
+}
+/* boo_animation */
+@keyframes boo {
+  0% {opacity: 100%;}
+  5% {opacity: 0%;}
+  10% {opacity: 100%;}
+  15% {opacity: 0%;}
+  20% {opacity: 100%;}
+  25% {opacity: 0%;}
+  30% {opacity: 100%;}
+  35% {opacity: 0%;}
+  40% {opacity: 100%;}
+  45% {opacity: 0%;}
+  50% {opacity: 100%;}
+  55% {opacity: 0%;}
+  60% {opacity: 100%;}
+  65% {opacity: 0%;}
+  70% {opacity: 100%;}
+  75% {opacity: 0%;}
+  80% {opacity: 100%;}
+  85% {opacity: 0%;}
+  90% {opacity: 100%;}
+  95% {opacity: 0%;}
+}
+@keyframes man {
+  0% {background-position: 0 top;}
+  40% {background-position: -580px top;}
+  100% {background-position: -1160px top;}
+}
